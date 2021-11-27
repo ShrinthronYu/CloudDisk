@@ -1,0 +1,98 @@
+2021-11-27 20:31:50.555  INFO 12064 --- [restartedMain] c.w.clouddisk.CloudDiskApplication       : Starting CloudDiskApplication using Java 1.8.0_301 on ShintronYu with PID 12064 (D:\Programming\CloudDisk\target\classes started by Super_Yu in D:\Programming\CloudDisk)
+2021-11-27 20:31:50.556  INFO 12064 --- [restartedMain] c.w.clouddisk.CloudDiskApplication       : No active profile set, falling back to default profiles: default
+2021-11-27 20:31:50.586  INFO 12064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-27 20:31:50.586  INFO 12064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-27 20:31:50.953  INFO 12064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-11-27 20:31:50.959  INFO 12064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2021-11-27 20:31:51.188  WARN 12064 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorPageCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/error/ErrorMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'errorPageCustomizer' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dispatcherServletRegistration' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]: Unsatisfied dependency expressed through method 'dispatcherServletRegistration' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dispatcherServlet' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.DispatcherServlet]: Factory method 'dispatcherServlet' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.web.servlet.DispatcherServlet.setDispatchOptionsRequest(Z)V
+2021-11-27 20:31:51.195  INFO 12064 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-27 20:31:51.209 ERROR 12064 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration.dispatcherServlet(DispatcherServletAutoConfiguration.java:91)
+
+The following method did not exist:
+
+    org.springframework.web.servlet.DispatcherServlet.setDispatchOptionsRequest(Z)V
+
+The calling method's class, org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration, was loaded from the following location:
+
+    jar:file:/C:/Users/Super_Yu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.6.0/spring-boot-autoconfigure-2.6.0.jar!/org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletConfiguration.class
+
+The called method's class, org.springframework.web.servlet.DispatcherServlet, is available from the following locations:
+
+    jar:file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar!/org/springframework/web/servlet/DispatcherServlet.class
+    jar:file:/C:/Users/Super_Yu/.m2/repository/org/springframework/spring-webmvc/5.3.13/spring-webmvc-5.3.13.jar!/org/springframework/web/servlet/DispatcherServlet.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springframework.web.servlet.DispatcherServlet: file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar
+    org.springframework.web.servlet.FrameworkServlet: file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar
+    org.springframework.web.servlet.HttpServletBean: file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar
+    javax.servlet.http.HttpServlet: file:/C:/Users/Super_Yu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.55/tomcat-embed-core-9.0.55.jar
+    javax.servlet.GenericServlet: file:/C:/Users/Super_Yu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.55/tomcat-embed-core-9.0.55.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration and org.springframework.web.servlet.DispatcherServlet
+
+2021-11-27 21:29:44.586  INFO 6944 --- [main] c.w.clouddisk.CloudDiskApplication       : Starting CloudDiskApplication using Java 1.8.0_301 on ShintronYu with PID 6944 (D:\Programming\CloudDisk\target\classes started by Super_Yu in D:\Programming\CloudDisk)
+2021-11-27 21:29:44.589  INFO 6944 --- [main] c.w.clouddisk.CloudDiskApplication       : No active profile set, falling back to default profiles: default
+2021-11-27 21:29:45.014  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-27 21:29:45.015  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-11-27 21:29:45.021  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2021-11-27 21:29:45.026  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-27 21:29:45.026  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-27 21:29:45.030  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2021-11-27 21:29:45.261  WARN 6944 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorPageCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/error/ErrorMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'errorPageCustomizer' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dispatcherServletRegistration' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]: Unsatisfied dependency expressed through method 'dispatcherServletRegistration' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dispatcherServlet' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.DispatcherServlet]: Factory method 'dispatcherServlet' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.web.servlet.DispatcherServlet.setDispatchOptionsRequest(Z)V
+2021-11-27 21:29:45.267  INFO 6944 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-27 21:29:45.281 ERROR 6944 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration.dispatcherServlet(DispatcherServletAutoConfiguration.java:91)
+
+The following method did not exist:
+
+    org.springframework.web.servlet.DispatcherServlet.setDispatchOptionsRequest(Z)V
+
+The calling method's class, org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration, was loaded from the following location:
+
+    jar:file:/C:/Users/Super_Yu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.6.0/spring-boot-autoconfigure-2.6.0.jar!/org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletConfiguration.class
+
+The called method's class, org.springframework.web.servlet.DispatcherServlet, is available from the following locations:
+
+    jar:file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar!/org/springframework/web/servlet/DispatcherServlet.class
+    jar:file:/C:/Users/Super_Yu/.m2/repository/org/springframework/spring-webmvc/5.3.13/spring-webmvc-5.3.13.jar!/org/springframework/web/servlet/DispatcherServlet.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springframework.web.servlet.DispatcherServlet: file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar
+    org.springframework.web.servlet.FrameworkServlet: file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar
+    org.springframework.web.servlet.HttpServletBean: file:/C:/Users/Super_Yu/.m2/repository/spring/spring-webmvc/1.0.2/spring-webmvc-1.0.2.jar
+    javax.servlet.http.HttpServlet: file:/C:/Users/Super_Yu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.55/tomcat-embed-core-9.0.55.jar
+    javax.servlet.GenericServlet: file:/C:/Users/Super_Yu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.55/tomcat-embed-core-9.0.55.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration and org.springframework.web.servlet.DispatcherServlet
+
