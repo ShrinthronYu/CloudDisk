@@ -1,10 +1,11 @@
 package com.wavebigfish.clouddisk.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+
 import lombok.Data;
 
 @Data
-@Schema(name = "文件列表DTO",required = true)
+@Schema(name = "文件列表DTO", required = true)
 public class UserfileListDTO {
     @Schema(description = "文件路径")
     private String filePath;

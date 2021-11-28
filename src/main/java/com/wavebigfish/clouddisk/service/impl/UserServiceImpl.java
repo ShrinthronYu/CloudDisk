@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService{
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Resource
     UserMapper userMapper;
@@ -35,10 +35,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String telephone = user.getTelephone();
         String password = user.getPassword();
 
-        if (!StringUtils.hasLength(telephone) || !StringUtils.hasLength(password)){
+        if (!StringUtils.hasLength(telephone) || !StringUtils.hasLength(password)) {
             return RestResult.fail().message("手机号或密码不能为空！");
         }
-        if (isTelePhoneExit(telephone)){
+        if (isTelePhoneExit(telephone)) {
             return RestResult.fail().message("手机号已存在！");
         }
 
@@ -76,7 +76,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public RestResult<User> login(User user) {
         String telephone = user.getTelephone();
         String password = user.getPassword();
-    
+
         LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(User::getTelephone, telephone);
         User saveUser = userMapper.selectOne(lambdaQueryWrapper);
@@ -90,25 +90,23 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         } else {
             return RestResult.fail().message("手机号或密码错误！");
         }
-    
+
     }
 
     @Override
     public User getUserByToken(String token) {
         User tokenUserInfo = null;
         try {
-    
+
             Claims c = JWTUtil.parseJWT(token);
             String subject = c.getSubject();
             ObjectMapper objectMapper = new ObjectMapper();
             tokenUserInfo = objectMapper.readValue(subject, User.class);
-    
+
         } catch (Exception e) {
             log.error("解码异常");
             return null;
-    
         }
         return tokenUserInfo;
     }
-
 }

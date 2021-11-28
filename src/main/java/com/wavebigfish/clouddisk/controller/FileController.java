@@ -143,11 +143,11 @@ public class FileController {
 
         User sessionUser = userService.getUserByToken(token);
         String files = batchMoveFileDto.getFiles();
-        String newfilePath = batchMoveFileDto.getFilePath();
+        String newFilePath = batchMoveFileDto.getFilePath();
         List<UserFile> userFiles = JSON.parseArray(files, UserFile.class);
 
         for (UserFile userFile : userFiles) {
-            userfileService.updateFilepathByFilepath(userFile.getFilePath(), newfilePath, userFile.getFileName(),
+            userfileService.updateFilepathByFilepath(userFile.getFilePath(), newFilePath, userFile.getFileName(),
                     userFile.getExtendName(), sessionUser.getUserId());
         }
 
@@ -232,24 +232,21 @@ public class FileController {
         TreeNodeVO resultTreeNode = new TreeNodeVO();
         resultTreeNode.setLabel("/");
 
-        for (int i = 0; i < filePathList.size(); i++) {
-            String filePath = filePathList.get(i).getFilePath() + filePathList.get(i).getFileName() + "/";
+        for (UserFile file : filePathList) {
+            String filePath = file.getFilePath() + file.getFileName() + "/";
 
             Queue<String> queue = new LinkedList<>();
 
             String[] strArr = filePath.split("/");
-            for (int j = 0; j < strArr.length; j++) {
-                if (!"".equals(strArr[j]) && strArr[j] != null) {
-                    queue.add(strArr[j]);
+            for (String s : strArr) {
+                if (!"".equals(s) && s != null) {
+                    queue.add(s);
                 }
-
             }
             if (queue.size() == 0) {
                 continue;
             }
             resultTreeNode = insertTreeNode(resultTreeNode, "/", queue);
-
-
         }
         result.setSuccess(true);
         result.setData(resultTreeNode);
@@ -306,9 +303,10 @@ public class FileController {
         boolean isExistPath = false;
 
         try {
-            for (int i = 0; i < childrenTreeNodes.size(); i++) {
-                if (path.equals(childrenTreeNodes.get(i).getLabel())) {
+            for (TreeNodeVO childrenTreeNode : childrenTreeNodes) {
+                if (path.equals(childrenTreeNode.getLabel())) {
                     isExistPath = true;
+                    break;
                 }
             }
         } catch (Exception e) {
@@ -316,5 +314,4 @@ public class FileController {
         }
         return isExistPath;
     }
-
 }
