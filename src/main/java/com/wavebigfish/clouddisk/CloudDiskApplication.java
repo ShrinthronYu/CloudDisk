@@ -2,8 +2,9 @@ package com.wavebigfish.clouddisk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.*;
+import org.mybatis.spring.annotation.MapperScan;
 
+@MapperScan("com.wavebigfish.clouddisk.mapper")
 @SpringBootApplication
 public class CloudDiskApplication {
 

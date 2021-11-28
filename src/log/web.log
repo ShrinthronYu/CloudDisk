@@ -251,3 +251,31 @@ Correct the classpath of your application so that it contains compatible version
 2021-11-28 10:37:03.411  INFO 15484 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-11-28 10:37:03.413  INFO 15484 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-11-28 10:37:03.420  INFO 15484 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-28 11:05:19.709  INFO 5800 --- [main] c.w.clouddisk.CloudDiskApplication       : Starting CloudDiskApplication using Java 16.0.2 on ShintronYu with PID 5800 (D:\Programming\CloudDisk\target\classes started by Super_Yu in D:\Programming\CloudDisk)
+2021-11-28 11:05:19.711  INFO 5800 --- [main] c.w.clouddisk.CloudDiskApplication       : No active profile set, falling back to default profiles: default
+2021-11-28 11:05:20.079  INFO 5800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-28 11:05:20.080  INFO 5800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-11-28 11:05:20.087  INFO 5800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2021-11-28 11:05:20.093  INFO 5800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-28 11:05:20.094  INFO 5800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 11:05:20.098  INFO 5800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2021-11-28 11:05:20.474  INFO 5800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-28 11:05:20.482  INFO 5800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 11:05:20.483  INFO 5800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 11:05:20.584  INFO 5800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 11:05:20.584  INFO 5800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 837 ms
+2021-11-28 11:05:20.698  INFO 5800 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 11:05:20.731  INFO 5800 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-11-28 11:05:20.843  INFO 5800 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 11:05:20.913  INFO 5800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 11:05:21.013  INFO 5800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 11:05:21.023  INFO 5800 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-28 11:05:21.619  INFO 5800 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 11:05:21.625  INFO 5800 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 11:05:21.646  WARN 5800 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 11:05:21.828  WARN 5800 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-11-28 11:05:21.898  INFO 5800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-28 11:05:21.904  INFO 5800 --- [main] c.w.clouddisk.CloudDiskApplication       : Started CloudDiskApplication in 2.486 seconds (JVM running for 2.817)
+2021-11-28 11:06:13.798  INFO 5800 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 11:06:13.800  INFO 5800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-28 11:06:13.805  INFO 5800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

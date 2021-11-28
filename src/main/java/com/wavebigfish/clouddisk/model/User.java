@@ -4,13 +4,19 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 @Data
 @Table(name = "user")
 @Entity
+@TableName("user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableId(type = IdType.AUTO)
     @Column(columnDefinition = "bigint(20) comment '用户id'")
     private Long userId;
 
