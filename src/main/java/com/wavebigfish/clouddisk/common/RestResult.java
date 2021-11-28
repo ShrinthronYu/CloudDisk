@@ -32,6 +32,15 @@ public class RestResult<T> {
         return r;
     }
 
+    // 设置结果，形参为结果枚举
+    public static RestResult setResult(ResultCodeEnum result) {
+        RestResult r = new RestResult();
+        r.setSuccess(result.getSuccess());
+        r.setCode(result.getCode());
+        r.setMessage(result.getMessage());
+        return r;
+    }
+
     // 自定义返回数据
     public RestResult data(T param) {
         this.setData(param);
@@ -49,14 +58,4 @@ public class RestResult<T> {
         this.setCode(code);
         return this;
     }
-
-    // 设置结果，形参为结果枚举
-    public static RestResult setResult(ResultCodeEnum result) {
-        RestResult r = new RestResult();
-        r.setSuccess(result.getSuccess());
-        r.setCode(result.getCode());
-        r.setMessage(result.getMessage());
-        return r;
-    }
-
 }
